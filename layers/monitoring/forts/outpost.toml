@@ -1,0 +1,5 @@
+# outpost: watched by the monitoring hub watchtower (estate.toml
+# [hubs.monitoring]). fort monitoring scaffold wrote this file; the hub's
+# render of the fort is flux/hub/watchtower/outpost.yaml. An empty table is the
+# whole declaration for a watched fort.
+[monitoring]

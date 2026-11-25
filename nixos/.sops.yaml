@@ -10,6 +10,12 @@ creation_rules:
       - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
       - age1mnx7m26egapzapmvf5tweavayahjgcxvv4rcwpllzd249zezv9xqvef3yd
   # END fort sops rule: outpost
+  # BEGIN fort sops rule: watchtower
+  - path_regex: secrets/watchtower\.yaml$
+    age:
+      - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
+      - age127s7qfmnjpv2tknaa4nfp3qfg4vq4yzaqjw5hdkmv9m7fxh75c4q0zj98w
+  # END fort sops rule: watchtower
   - path_regex: secrets/.*\.yaml$
     age:
       - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
