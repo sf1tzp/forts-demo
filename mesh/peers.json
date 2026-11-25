@@ -1,4 +1,10 @@
 {
-  "peers": {},
+  "peers": {
+    "outpost": {
+      "wg_vpn_ip": "10.10.0.10",
+      "wg_endpoint_ip": "10.0.0.220",
+      "public_key": "KlmswIE2aQGtrlx8ZzFjS/YSBpsKubGGHVKYTZ6zdDI="
+    }
+  },
   "clients": {}
 }
