@@ -6,7 +6,7 @@
     # it in flake.lock; `nix flake update forts` is the update, `fort
     # check` reports drift. Develop against a local checkout with
     # `--override-input forts path:../forts`.
-    forts.url = "github:streetfortress/forts/v0.0.8";
+    forts.url = "github:streetfortress/forts/0.0.8";
     # nixpkgs and sops-nix are the framework's pins: one nixpkgs for the
     # modules and the hosts, so a fort builds against what the framework
     # was tested on.
