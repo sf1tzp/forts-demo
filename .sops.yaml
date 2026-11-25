@@ -12,8 +12,16 @@ creation_rules:
   - path_regex: provisioning/.*\.yaml$
     age:
       - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
+  # BEGIN fort sops rule: outpost
+  - path_regex: flux/(clusters|apps)/outpost/.*
+    encrypted_regex: ^(data|stringData)$
+    age:
+      - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
+      - age1g6l3j89zzwyuq82m7ap9ecdddgmaztgmvyvkwtzm85jzgf28lfjqhkemhu # outpost
+  # END fort sops rule: outpost
   - path_regex: flux/infrastructure/.*
     encrypted_regex: ^(data|stringData)$
     age:
       - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
       # fort-managed: one recipient per cluster
+      - age1g6l3j89zzwyuq82m7ap9ecdddgmaztgmvyvkwtzm85jzgf28lfjqhkemhu # cluster: outpost
