@@ -6,12 +6,13 @@
     # it in flake.lock; `nix flake update forts` is the update, `fort
     # check` reports drift. Develop against a local checkout with
     # `--override-input forts path:../forts`.
-    forts.url = "github:streetfortress/forts/v0.0.8";
+    forts.url = "github:streetfortress/forts/v0.0.9";
     # nixpkgs and sops-nix are the framework's pins: one nixpkgs for the
     # modules and the hosts, so a fort builds against what the framework
     # was tested on.
     nixpkgs.follows = "forts/nixpkgs";
     sops-nix.follows = "forts/sops-nix";
+    fort-layers.url = "github:streetfortress/fort-layers/v0.0.1";
   };
 
   outputs = inputs@{ self, forts, nixpkgs, sops-nix, ... }:
@@ -63,6 +64,7 @@
       # has `fort <role> <verb>` from the same lock. Core reads nothing
       # under layers/; this set is the whole of what the flake knows.
       layers = sys: {
+        fort-monitoring = inputs.fort-layers.packages.${sys}.fort-monitoring;
       };
 
       # The fort CLI at the framework's pin, on whatever machine runs it:

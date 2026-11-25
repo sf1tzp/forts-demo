@@ -6,16 +6,16 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1795209476,
-        "narHash": "sha256-lETcz4qcTqWoYqnZNVm27hvsDa1Pa+Nw+3WNCNhQrNs=",
+        "lastModified": 1795578985,
+        "narHash": "sha256-G1ib2WkHXssuwq6iA5zMcYi4iWMUuc67U8lBD4xmREE=",
         "owner": "streetfortress",
         "repo": "forts",
-        "rev": "2413f6352352e73a45502303a3279bc6daf672e0",
+        "rev": "366878430e871bcdb46453846216647bd892a51c",
         "type": "github"
       },
       "original": {
         "owner": "streetfortress",
-        "ref": "v0.0.8",
+        "ref": "v0.0.9",
         "repo": "forts",
         "type": "github"
       }
