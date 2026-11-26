@@ -17,12 +17,6 @@
 # reach them from the client's own config, above the Include.
 
 # cluster fort, libvirt
-Host outpost
-  Hostname 10.10.0.10
-  User ops
-  HostKeyAlias outpost
-
-# cluster fort, libvirt
 Host watchtower
   Hostname 10.10.0.11
   User ops

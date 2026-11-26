@@ -5,16 +5,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1794692479,
-        "narHash": "sha256-i75h62xO9229s/wBJacrjcB7w+P6OOflJNagwqRqG64=",
+        "lastModified": 1795644383,
+        "narHash": "sha256-p9YH4RT3d05b6NNsEpdv1LZMGgK5P/sOapzfTeEK86Q=",
         "owner": "streetfortress",
         "repo": "fort-layers",
-        "rev": "a3aa887c3ae1d4864df4d59d61fa6543ee039c5f",
+        "rev": "be863caba844cdb461bf1ee687a3e6750149dd2a",
         "type": "github"
       },
       "original": {
         "owner": "streetfortress",
-        "ref": "v0.0.1",
+        "ref": "v0.0.2",
         "repo": "fort-layers",
         "type": "github"
       }
@@ -25,16 +25,16 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1795578985,
-        "narHash": "sha256-G1ib2WkHXssuwq6iA5zMcYi4iWMUuc67U8lBD4xmREE=",
+        "lastModified": 1795731821,
+        "narHash": "sha256-AcmTmX/ZPO2wq8K2XaUa5cQckI4sEcmUNC6GM+QUokY=",
         "owner": "streetfortress",
         "repo": "forts",
-        "rev": "366878430e871bcdb46453846216647bd892a51c",
+        "rev": "7606d2ccbe4ecfcdcd7a803efb2ec3ceae0d3515",
         "type": "github"
       },
       "original": {
         "owner": "streetfortress",
-        "ref": "v0.0.9",
+        "ref": "v0.0.12",
         "repo": "forts",
         "type": "github"
       }
