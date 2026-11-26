@@ -4,6 +4,12 @@
 # from its ssh host key). The catch-all is what a new fort's block is
 # derived from: the admin set.
 creation_rules:
+  # BEGIN fort sops rule: outpost
+  - path_regex: secrets/outpost\.yaml$
+    age:
+      - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
+      - age18k0jwkuu6umgk9l7pmev62cyzj6a3lznz6eeuftmq5wdw4fv79nqjp598u
+  # END fort sops rule: outpost
   - path_regex: secrets/.*\.yaml$
     age:
       - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
