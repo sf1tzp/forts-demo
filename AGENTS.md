@@ -1,0 +1,61 @@
+# forts-demo: instructions for agents
+
+This repository is an estate. It declares forts and renders their files with
+the `fort` CLI from the forts framework. This file tells an agent the rules of the
+estate. `fort init` rendered it. The estate owns it now, so edit it freely.
+
+## The framework
+
+The estate pins the framework at `github:streetfortress/forts/v0.0.12`. The pinned tag is `v0.0.12`.
+`fort --version` prints the pin that `nixos/flake.lock` records.
+
+The reference docs describe every verb. Read the docs of the pinned tag,
+not the docs of a newer one.
+
+- Reference docs for this tag: https://github.com/streetfortress/forts/tree/v0.0.12/docs/reference
+- `docs/reference/manifest.md` lists the keys of `forts/<host>.toml`.
+- `docs/reference/<verb>.md` describes one verb.
+
+## The verbs
+
+Run a verb as `just fort <verb>` or `nix run ./nixos#fort -- <verb>`.
+
+| Verb | Use it to |
+| --- | --- |
+| `fort scaffold <host>` | Render the files of a fort from `forts/<host>.toml`. |
+| `fort mint <host>` | Make the keys of a new fort. Run it once per fort. |
+| `fort add <host> <oci-ref> --version <tag>` | Render one chart's app dir under `flux/apps/<host>/` from the chart's contract. |
+| `fort seed <host>` | Make the Secrets that the inventories of a fort declare. Run it after `fort add`. |
+| `fort remove <host> <app>` | Remove one app that `fort add` rendered. Flux prunes the workload after the merge. |
+| `fort check <host>` or `fort check --all` | Validate the estate. Add `--eval` to evaluate the NixOS configuration. |
+| `fort image <host>` | Build a bootable disk image. |
+| `fort provision <host>` | Create or update the machine. It wraps `pulumi up`. |
+| `fort preview <host>` or `--all` | Compare the declared estate with reality. |
+| `fort dismantle <host>` | Remove the files that `fort scaffold` rendered. Run it before `fort destroy`. |
+| `fort destroy <host>` | Delete the machine of a dismantled fort. |
+| `fort layer add` or `fort layer remove` | Add or remove a layer. |
+| `fort link add` or `fort estate link` | Link this estate to another estate. |
+| `fort ssh-config`, `fort wg-conf` | Render a helper file. |
+
+## To add a workload
+
+1. Write or edit `forts/<host>.toml`. The manifest is the declaration.
+2. Run `fort scaffold <host>`. Read the report.
+3. Run `fort add <host> <oci-ref> --version <tag>`. Read the report.
+   A workload that is not a chart goes in `flux/apps/<host>/` by hand, or in the file that the layer names.
+4. Run `fort seed <host>`. It makes the Secrets that the report marks `◆`.
+5. Run `fort check --all --eval`. Fix every error.
+
+## Invariants
+
+- Do not hand-edit a file that a verb regenerates. Change the manifest and run the verb again.
+- Do not commit a decrypted secret. Encrypt a secret file with `sops` before `git add`.
+- `fort scaffold` never overwrites a file that exists. To change a rendered file, edit it by hand or delete it first.
+- Commit `provisioning/pulumi/` after every `fort provision` and every `fort destroy`.
+- A verb that writes files stages what it writes and stops. Review the staged diff with `git diff --cached` before you commit.
+- Do not read, print or edit a WireGuard private key.
+
+## Done
+
+A change is done when `fort check --all --eval` passes with no error. Run it
+before every commit and again before every push.
