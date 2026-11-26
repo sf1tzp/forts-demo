@@ -10,8 +10,5 @@ repo = "https://github.com/sf1tzp/forts-demo"
 [mesh]
 cidr = "10.10.0.0/24"
 
-[hubs.monitoring]
-estate = "https://github.com/sf1tzp/forts-demo"
-fort = "watchtower"
 
 
