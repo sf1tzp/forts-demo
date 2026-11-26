@@ -1,5 +1,0 @@
-encryptionsalt: v1:0qrUd8i4RMI=:v1:k9hQQdzpTEMRsjcm:Ukbp1+dfEHQT8oh8jMCi9lg1QDdHIg==
-config:
-  forts:libvirtUri: qemu+ssh://soundship/system
-  forts:seed: nocloud
-  forts:imageId: /home/steven/.cache/forts/watchtower-nixos.qcow2
