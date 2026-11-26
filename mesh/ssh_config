@@ -15,9 +15,3 @@
 # account its peers.json entry names. A role alias (dev, prod, …) exists while exactly
 # one fort claims the stem. Other accounts on a fort are the estate's:
 # reach them from the client's own config, above the Include.
-
-# cluster fort, libvirt
-Host watchtower
-  Hostname 10.10.0.11
-  User ops
-  HostKeyAlias watchtower

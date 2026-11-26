@@ -1,10 +1,4 @@
 {
-  "peers": {
-    "watchtower": {
-      "wg_vpn_ip": "10.10.0.11",
-      "wg_endpoint_ip": "10.0.0.221",
-      "public_key": "MasY0c816WEDt1JN86wFIt4a3cl1Y7+IFCWaYWhKdyk="
-    }
-  },
+  "peers": {},
   "clients": {}
 }

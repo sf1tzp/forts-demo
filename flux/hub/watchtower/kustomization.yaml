@@ -9,5 +9,4 @@
 # clusters except through the hub's subscription to it.
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-resources:
-  - watchtower.yaml
+resources: []
