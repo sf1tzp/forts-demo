@@ -1,8 +1,27 @@
 {
   "nodes": {
+    "fort-layers": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1795644383,
+        "narHash": "sha256-p9YH4RT3d05b6NNsEpdv1LZMGgK5P/sOapzfTeEK86Q=",
+        "owner": "streetfortress",
+        "repo": "fort-layers",
+        "rev": "be863caba844cdb461bf1ee687a3e6750149dd2a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "streetfortress",
+        "ref": "v0.0.2",
+        "repo": "fort-layers",
+        "type": "github"
+      }
+    },
     "forts": {
       "inputs": {
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "sops-nix": "sops-nix"
       },
       "locked": {
@@ -22,6 +41,22 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1792502884,
+        "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1790822859,
         "narHash": "sha256-69xHQhAeMAD2wDXO7T2pcOZIF9Sga2W+JkmY2a11Ops=",
         "owner": "NixOS",
@@ -38,6 +73,7 @@
     },
     "root": {
       "inputs": {
+        "fort-layers": "fort-layers",
         "forts": "forts",
         "nixpkgs": [
           "forts",

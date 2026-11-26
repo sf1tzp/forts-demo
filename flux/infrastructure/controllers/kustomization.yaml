@@ -4,3 +4,6 @@ resources:
   - gateway-api
   - traefik
   - cert-manager
+  - prometheus-operator-crds
+  - prometheus-operator
+  - kube-state-metrics
