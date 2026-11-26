@@ -1,0 +1,44 @@
+# Grafana's admin login (forts.inventory.yaml; fort monitoring mint
+# wrote it). The chart reads admin-user and admin-password.
+apiVersion: v1
+kind: Secret
+metadata:
+    name: grafana-admin
+    namespace: monitoring-central
+type: Opaque
+stringData:
+    admin-user: ENC[AES256_GCM,data:YmAmT3w=,iv:GnXzXGxvt8h1BzAG7f0+kH9b+FcSL7lI8yt1Ctz7+gM=,tag:MXjfOTgXnd47r79JqKZElg==,type:str]
+    admin-password: ENC[AES256_GCM,data:O31HrUglupdTd0g278y3PwfZcdBI90ENKnj3JFsr77wYFI0IIEWLHPrkGMAK97U8,iv:KFAmB7XpApI0fFWoOpHhfVblwyRkTJ65KcwdaGgy1Cg=,tag:uBDtfVeaTguLVGHf7TvYgA==,type:str]
+sops:
+    age:
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBPV1V2a0MrZXM3ZEs4eTBY
+            WkFtc2JHSzZJSFNpendSdVZPSzdsL1NWMFhVCnlXeWc2NFIwV2lvNjUvcVBRUkpH
+            bkNTeDZRR09YUDZ4SVE3UkxFbXFQV0kKLS0tIHh4S1hHUEkrTldHa2VGMmkweits
+            ZytyYUYyMEFiNWZnREdrUjd5dW1iTkkKIp8RyfaBZ5vVomiDhbqxKq46/yeXM4jX
+            nKfruZdqI07nzrD8jrIw648rV3arj/k1Nf+gO3h3zjZOTkXPavSXjg==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBPdnFMVDBMeGxMaUM2dzNa
+            NXV3ZWN6VGxQMFJpS0JBNDRzR1VKN0M2eWxVClBPYVJvWDRQeit2ckRvdkYzWUln
+            SEQ1TFRMQS96Skhyam9LZ3g5bUt4dGsKLS0tIEgwRURSVXpLNXJhd1NGOHdDZUx6
+            OUNWdzJMRVV2cGJzaHBCeGlFZS82QWcKabrW1cZJDN/ETmUgSvO69Y0WkRXEqxYI
+            sl3qvB/L4MJCPdxUT2Z3O8k63qfMx+aQmsE1QyTCfreDgbkaYLRLXQ==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age1azjc5x6fl4yk8yvyzjlazxllyrky506k72dfyeaqtmltx93p7ekqrh77yt
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA5ZGlwN3NNb1ZxcER2Q240
+            OXgwcjZ2MG9CUTBBeGQ1OFRzalNqWkxCcWlBCkF2SFdFZU4xWkFGOHhnMmlpUFdS
+            STg2WDlFUStUeUdNeFJPckxFeGFIOWsKLS0tIGdtdm9aZDJtOFpXMnBaMUY4Ympv
+            UTJxUTcvVisrR0hqM1BHeXJuek1BVHMKT85maciakyd5x5EO0AuzGEpPPCeTJVM2
+            sMK1kkz+pmbG9Il7D6FOTiHmP75ZcH6VSw2Ioo9PPP8GwZ3dCmI0vA==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age16m4pr6kehcjxxqerl0d582atj3ler4tdtuchulg0tn3q6rmgudesdysv3h
+    encrypted_regex: ^(data|stringData)$
+    lastmodified: "2026-11-26T23:39:17Z"
+    mac: ENC[AES256_GCM,data:HuCy4EBXoJLYc/9inksVF2rL3R/NLQvtoripkkRt+exAr3BpPM0AzBasiY5z30hhrOAlO6wjYKOE7Hkjesyty1svBfsswLWS8SrPqyClKeLaKWNu6QGUJ4EYVjlPfh3oOzw8is4PeFqQOXsD4Cz106LcqwIxGtzKfbemwRmsa1M=,iv:fMPk45y93nkAO/NSKfUT+SaSX9jGCCctsucTQ63RgEw=,tag:TnxFQ9m2hD28C5dSZ8bQdg==,type:str]
+    version: 3.13.3
