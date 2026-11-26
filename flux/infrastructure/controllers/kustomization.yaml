@@ -7,3 +7,4 @@ resources:
   - prometheus-operator-crds
   - prometheus-operator
   - kube-state-metrics
+  - fluent-bit
