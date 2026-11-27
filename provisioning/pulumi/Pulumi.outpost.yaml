@@ -1,5 +1,0 @@
-encryptionsalt: v1:20sw7bxV+9c=:v1:lk6SnQ4RalIyaATU:1pWdKJxY1vomz65sNKyUfgY59lDPAg==
-config:
-  forts:libvirtUri: qemu+ssh://soundship/system
-  forts:seed: nocloud
-  forts:imageId: /home/steven/.cache/forts/outpost-nixos.qcow2
