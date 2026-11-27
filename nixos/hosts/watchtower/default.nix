@@ -48,6 +48,7 @@
     # sops file and the passphrase into provisioning/console-passwords.yaml.
     inputs.forts.nixosModules.shell
     inputs.forts.nixosModules.ops-console
+    inputs.fort-layers.nixosModules.monitoring-hub  # the hub's ingest ports on the mesh (fort-layers, layers/monitoring/forts/watchtower.toml)
   ];
 
   networking.hostName = "watchtower";
@@ -129,4 +130,10 @@
   # no declared-but-absent secrets to fail activation.
 
   system.stateVersion = "25.11";
+
+  # This fort is a monitoring hub (fort-layers, layers/monitoring/
+  # forts/<fort>.toml [monitoring.hub]): the module opens the central
+  # Prometheus's remote_write (30990) and Loki's push (31100) on the mesh
+  # interface for this estate's forts.
+  sfi.monitoring-hub.enable = true;
 }

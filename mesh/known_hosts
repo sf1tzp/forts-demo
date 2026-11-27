@@ -2,4 +2,4 @@
 # restored) and fort ssh-config (the key sops-decrypted from
 # nixos/secrets/<host>.yaml); fort dismantle removes a line. Do not edit.
 # Keyed by fort name (ssh_config sets HostKeyAlias) and mesh address.
-outpost,10.10.0.10 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHosYqEomZumklV6tkHMkUvSZazMCm6xieFtl3pwz6ZC
+watchtower,10.10.0.11 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGtvTQ+3805Rx45CsnzaLZitjxpZbAurAlkXGtjon4H2

@@ -14,3 +14,13 @@ resources:
   - rules-edge.yaml
   - mesh-services-edge.yaml
   - ops-read.yaml
+# The push (layers/monitoring/estate.toml [push] metrics): a patch on the
+# edge Prometheus, so the rendered file above is never edited.
+patches:
+  - path: push-metrics.yaml
+    target:
+      group: monitoring.coreos.com
+      version: v1
+      kind: Prometheus
+      name: edge
+      namespace: monitoring

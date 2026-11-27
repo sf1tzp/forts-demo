@@ -1,0 +1,11 @@
+# Grafana's admin login (forts.inventory.yaml; fort monitoring mint
+# wrote it). The chart reads admin-user and admin-password.
+apiVersion: v1
+kind: Secret
+metadata:
+  name: grafana-admin
+  namespace: monitoring-central
+type: Opaque
+stringData:
+  admin-user: admin
+  admin-password: f7868480c3ab7f512507af9c3a478f7d7f59d9858cae6d13

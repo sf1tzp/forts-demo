@@ -12,16 +12,17 @@ creation_rules:
   - path_regex: provisioning/.*\.yaml$
     age:
       - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
-  # BEGIN fort sops rule: outpost
-  - path_regex: flux/(clusters|apps)/outpost/.*
+  # BEGIN fort sops rule: watchtower
+  - path_regex: flux/(clusters|apps)/watchtower/.*
     encrypted_regex: ^(data|stringData)$
     age:
       - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
       - age1c5c35uc5w2m99wlw0qy4vuawa6y4qxpmgx852xptja508tw2af7qxh2059 # outpost
-  # END fort sops rule: outpost
+      - age1pw9kr0frvly5w5du62rt56m53474yj0pmfah8ar2rntd4mc95q9qmcr6w4 # watchtower
+  # END fort sops rule: watchtower
   - path_regex: flux/infrastructure/.*
     encrypted_regex: ^(data|stringData)$
     age:
       - age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy # admin
       # fort-managed: one recipient per cluster
-      - age1c5c35uc5w2m99wlw0qy4vuawa6y4qxpmgx852xptja508tw2af7qxh2059 # cluster: outpost
+      - age1pw9kr0frvly5w5du62rt56m53474yj0pmfah8ar2rntd4mc95q9qmcr6w4 # cluster: watchtower
