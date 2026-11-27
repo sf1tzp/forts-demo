@@ -10,6 +10,10 @@ repo = "https://github.com/sf1tzp/forts-demo"
 [mesh]
 cidr = "10.10.0.0/24"
 
+[acme]
+email = "tech@stev.lol"
+directory = "https://step-ca.lofi:9000/acme/acme/directory"
+
 
 [hubs.monitoring]
 estate = "https://github.com/sf1tzp/forts-demo"
