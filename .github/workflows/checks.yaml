@@ -28,3 +28,10 @@ jobs:
 
       - name: The gate (fort check --all --eval)
         run: nix run ./nixos#fort -- check --all --eval
+
+      - name: The gate of the monitoring layer (fort monitoring check --all)
+        # A layer's own check, at the layer's pin (docs/layers.md). Core
+        # reads nothing under layers/; this step is the layer's gate.
+        env:
+          GITEA_ACTIONS: "true"
+        run: nix run ./nixos#fort-monitoring -- check --all

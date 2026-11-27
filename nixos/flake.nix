@@ -12,6 +12,7 @@
     # was tested on.
     nixpkgs.follows = "forts/nixpkgs";
     sops-nix.follows = "forts/sops-nix";
+    fort-layers.url = "github:streetfortress/fort-layers/v0.0.3";
   };
 
   outputs = inputs@{ self, forts, nixpkgs, sops-nix, ... }:
@@ -63,6 +64,7 @@
       # has `fort <role> <verb>` from the same lock. Core reads nothing
       # under layers/; this set is the whole of what the flake knows.
       layers = sys: {
+        fort-monitoring = inputs.fort-layers.packages.${sys}.fort-monitoring;
       };
 
       # The fort CLI at the framework's pin, on whatever machine runs it:
