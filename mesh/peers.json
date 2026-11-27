@@ -1,16 +1,5 @@
 {
-  "peers": {
-    "outpost": {
-      "wg_vpn_ip": "10.10.0.10",
-      "wg_endpoint_ip": "10.0.0.220",
-      "public_key": "1i7nEHpLKBQyyBvwXs/QF0JpJvg6xN0js53k3TicIlY="
-    },
-    "watchtower": {
-      "wg_vpn_ip": "10.10.0.11",
-      "wg_endpoint_ip": "10.0.0.221",
-      "public_key": "FZUelOK3QBcA50rKYNj5/3zgR3LgS85QgNmzq04EuxM="
-    }
-  },
+  "peers": {},
   "clients": {
     "soundship": {
       "wg_vpn_ip": "10.10.0.2",
