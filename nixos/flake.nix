@@ -12,7 +12,7 @@
     # was tested on.
     nixpkgs.follows = "forts/nixpkgs";
     sops-nix.follows = "forts/sops-nix";
-    fort-layers.url = "github:streetfortress/fort-layers/v0.0.2";
+    fort-layers.url = "github:streetfortress/fort-layers/v0.0.3";
   };
 
   outputs = inputs@{ self, forts, nixpkgs, sops-nix, ... }:

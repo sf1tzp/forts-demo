@@ -5,16 +5,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1795644383,
-        "narHash": "sha256-p9YH4RT3d05b6NNsEpdv1LZMGgK5P/sOapzfTeEK86Q=",
+        "lastModified": 1795739958,
+        "narHash": "sha256-pOURGnSnV/euBzTHxAeLUYA86Lr+c6Aqx4eDpaBU5eo=",
         "owner": "streetfortress",
         "repo": "fort-layers",
-        "rev": "be863caba844cdb461bf1ee687a3e6750149dd2a",
+        "rev": "206914b01d2cd1a71c28d16344ebea7eb83b2775",
         "type": "github"
       },
       "original": {
         "owner": "streetfortress",
-        "ref": "v0.0.2",
+        "ref": "v0.0.3",
         "repo": "fort-layers",
         "type": "github"
       }
