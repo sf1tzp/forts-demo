@@ -23,8 +23,11 @@ generatorOptions:
 
 configMapGenerator:
   - name: dashboard-estate-overview
+    namespace: monitoring-central
     files:
       - dashboards/estate-overview.json
+
   - name: dashboard-fort-overview
+    namespace: monitoring-central
     files:
       - dashboards/fort-overview.json
