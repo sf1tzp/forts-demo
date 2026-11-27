@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: sops-canary
+    namespace: default
+type: Opaque
+stringData:
+    canary: ENC[AES256_GCM,data:cbl3rLtbGBJ1A17qs99CxHM=,iv:A3JK3Yzzb2+FGf25qrESd8MoZmrFDHRvrMPrzApKEV0=,tag:F48LOTtYngvIxTnEpBLBmQ==,type:str]
+sops:
+    age:
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBGWmVkUFkrcWprQ0lWQXEw
+            Rm5BTlNZeWhRZjdvbW16dGpQeklZNDJhM1U0CjFOS3F2SWFFbnA0WDdOZjk1aWRp
+            UDlQUnNSRHA0ZDdvQlhwSVVIWGhBOG8KLS0tIFZaVmw1QjdtUFRXWFhRMDdlVlB5
+            eGpHY2ZpY0paeUxlT2pNTlBmRFVxb0kKIQhpvlm2yAo+6geAwPbJ5/MH3+aG8xSn
+            INC3q4UhUJ/jFN1Qi/wQLpZ92WhacfsHedZ5KOkyfoWhXVd+pgqP5Q==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age13wdm0n6sh2d48up9e5hha2mtd6px2lr9p0gffmdl0c09g7f0fgdqhtj6fy
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBHeGY5YlZ0RTlPbUFKRXhV
+            dms2dUt0K0VyTWtDTWc4VUpHWW5jWVlxWlUwClc5T3p6MDdsZXhTTTh1Wk1pbkl3
+            Y0g2d0J3NEoxSGVtVnBFTkx4NytYUjQKLS0tIHlnTVZkb25BV2gyV0FoaUxtOW5x
+            VDk3QVFBODdmMGpCa0F5a21uZ3JucTQKNaabKapC0OBiH4F4SVl02dgqmKwpg0VW
+            u633dBTipRyt1JCClDRG45IUE4OD927eTYahzHOUFKrUFjaUMph3LA==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age18u66vn9aewlhffpmceqhzh5jh36s7nl3fhcyx8mnsylay7fayvpsnqve9u
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBPUTQ2YXZpeXFqRnp3ZlVX
+            OWZwdnUvVkVubHRXNVV5WURaUkhGbnMwa2hRCnBuQVZhU1BJY0svMWIyN3NyeG9v
+            VlRxRWNqZDBHUDFUV1JGZWxselN1OW8KLS0tIFVWd3hEb2dyZWMwTTdVdWN4TDBU
+            bzJwK29Vc3g4b1BTRWkyTEZHSHFXakEKFxX0F+Cv0filfDOMkP9kN5vf2FtnhQ/B
+            4NFC8Aa8Mod+cdKpHiggaPk9iw8RavC2AiI0tojs3p4z+XqQS+Y/Dg==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age1dzxgqs0st6zg0fpwk6c9qm3k55ks9cl8nk7j42vrvwgncmelza7qup75x6
+    encrypted_regex: ^(data|stringData)$
+    lastmodified: "2026-11-27T04:55:51Z"
+    mac: ENC[AES256_GCM,data:su8DVW0KFSGQJtDYeIMpefO53KLlEUups66SQEO5OA+DPGscW4IB0NBuA0110Onm5cc/wO1BVuw1erVYQcKKe4PLDrD6sXDWVL1pip21QMoeAd+kcSMz1h2azixVBv4FsMhC8QRF28kg4LHKQagSR4Wcff5S+rroGo1pqfKFN5w=,iv:2r+/ukScUtx4V2Ia0vwxtLCWhYSr+je10U/Ib3QEA30=,tag:88K+fPNontioZm7O+vDLAA==,type:str]
+    version: 3.13.3

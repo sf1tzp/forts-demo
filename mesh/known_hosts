@@ -3,3 +3,4 @@
 # nixos/secrets/<host>.yaml); fort dismantle removes a line. Do not edit.
 # Keyed by fort name (ssh_config sets HostKeyAlias) and mesh address.
 outpost,10.10.0.10 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJqwuwYfDQkP/OvLVtGufCUmhJbeCsv8OOZ+KD0Vh+yJ
+watchtower,10.10.0.11 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQBgJ6vTJSD6cR/H9CPdOShuYF8IexF/VPtls49rMLF
