@@ -6,5 +6,10 @@
       "public_key": "E51hN746wiTjgYTKjv2yy5t1rtf4U9EWt9KkNESuSEM="
     }
   },
-  "clients": {}
+  "clients": {
+    "soundship": {
+      "wg_vpn_ip": "10.10.0.2",
+      "public_key": "tfvCIahikyKmkf9Lp7T94A8sVZL5FQg5MSk/Eg42o00="
+    }
+  }
 }
