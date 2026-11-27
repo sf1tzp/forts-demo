@@ -17,13 +17,14 @@ resources:
   - grafana-admin.sops.yaml
 
 generatorOptions:
-	  disableNameSuffixHash: true
-	  labels:
-	    grafana_dashboard: "1"
-	configMapGenerator:
-	  - name: dashboard-estate-overview
-	    files:
-	      - dashboards/estate-overview.json
-	  - name: dashboard-fort-overview
-	    files:
-	      - dashboards/fort-overview.json
+  disableNameSuffixHash: true
+  labels:
+    grafana_dashboard: "1"
+
+configMapGenerator:
+  - name: dashboard-estate-overview
+    files:
+      - dashboards/estate-overview.json
+  - name: dashboard-fort-overview
+    files:
+      - dashboards/fort-overview.json
