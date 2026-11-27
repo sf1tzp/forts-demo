@@ -1,0 +1,17 @@
+# Serving cert for the https-podinfo listener; issued by the estate's
+# ClusterIssuer `letsencrypt` (https://step-ca.lofi:9000/acme/acme/directory) via the ACME http01
+# gateway solver. Gated on DNS: until podinfo.outpost.forts-demo.mesh resolves to this
+# fort where the ACME server looks, cert-manager retries harmlessly and
+# the listener serves its self-signed placeholder.
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: podinfo
+  namespace: traefik
+spec:
+  secretName: podinfo-tls
+  dnsNames:
+    - podinfo.outpost.forts-demo.mesh
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt

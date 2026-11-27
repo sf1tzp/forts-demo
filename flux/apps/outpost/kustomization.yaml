@@ -8,3 +8,4 @@ resources:
   # workloads below it.
   - sops-canary.yaml
   - gateway
+  - podinfo

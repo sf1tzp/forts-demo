@@ -1,0 +1,34 @@
+# podinfo's app alert — added by hand: `fort add` renders the scrape,
+# rules are policy (docs/reference/add.md). The edge Prometheus selects
+# PrometheusRules in every namespace except those scoped `central`, so
+# this evaluates on outpost and pages through outpost's Alertmanager.
+#
+# The demo lever: set `faults.error: true` in release.yaml and podinfo
+# answers ~50% of requests with 5xx. The scrape itself (every 15s on the
+# http port) is the traffic floor, so the ratio climbs with no external
+# load and this fires within ~10m. Revert the PR to heal it.
+# (`faults.unhealthy` exercises the generic path instead:
+# KubePodCrashLooping from the edge rule set.)
+#
+# Metric names checked against the 6.17.0 image: podinfo exposes the
+# http_request_duration_seconds histogram with method/path/status labels.
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: podinfo
+  namespace: podinfo
+spec:
+  groups:
+    - name: podinfo
+      rules:
+        - alert: PodinfoErrorRateHigh
+          expr: >-
+            sum(rate(http_request_duration_seconds_count{namespace="podinfo", status=~"5.."}[5m]))
+            /
+            sum(rate(http_request_duration_seconds_count{namespace="podinfo"}[5m]))
+            > 0.05
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "podinfo on {{ $externalLabels.cluster }}: >5% of requests are 5xx over 5m"
