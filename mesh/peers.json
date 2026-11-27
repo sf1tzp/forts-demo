@@ -11,5 +11,10 @@
       "public_key": "FZUelOK3QBcA50rKYNj5/3zgR3LgS85QgNmzq04EuxM="
     }
   },
-  "clients": {}
+  "clients": {
+    "soundship": {
+      "wg_vpn_ip": "10.10.0.2",
+      "public_key": "tfvCIahikyKmkf9Lp7T94A8sVZL5FQg5MSk/Eg42o00="
+    }
+  }
 }
